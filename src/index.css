@@ -1,13 +1,129 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*{
+  box-sizing: border-box;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-title {
+  text-transform: capitalize;
+  line-height: 1.2;
+  color: #000;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.user-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+  flex-direction: column;
+}
+.user_card_wrapper {
+    margin-bottom: 1rem;
+    display: flex;
+    background: #ececec;
+    margin: 0 0 10px 0;
+    padding: 1rem;
+}
+.user_name_icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #909090;
+  border-radius: 25px;
+  margin-right: 1rem;
+  color: #fff;
+}
+.title {
+  text-transform: capitalize;
+  line-height: 1.2;
+  color: #000;
+  font-size: 0.8rem;
+  text-align: left;
+  margin: 0;
+  font-weight: 400;
+}
+.filter-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+
+input[type="text"] ,select{
+  padding: 8px 10px;
+  border: 1px solid #000;
+  outline: none;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+.pagination {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+.pagination li{
+  margin: 0 2px;
+  display: inline-block;
+}
+.pagination li.active{
+  border: 1px solid #000;
+  margin: 0 5px;
+  display: inline-block;
+  padding: 1px 5px;
+}
+.cards_wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  .filter-wrapper {
+    justify-content: flex-end;
+}
+.filter_search{
+  margin-left: 1rem;
+}
+.cards_wrapper {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.user_card_wrapper {
+  width: calc(100% /4 - 20px);
+  margin: 10px;
+}
 }
